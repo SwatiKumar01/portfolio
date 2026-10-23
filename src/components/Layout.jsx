@@ -1,24 +1,35 @@
 
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet, Link } from "react-router";
+import ThemeToggle from "./ThemeToggle.jsx";
 
 export default function Layout() {
   return (
     <>
-      <a className="skip-link" href="#main-content">
+      <button
+        className="skip-link"
+        type="button"
+        onClick={() => {
+          document.getElementById("main-content")?.focus();
+        }}
+      >
         Skip to content
-      </a>
+      </button>
 
       <header className="site-header">
-        <a className="brand" href="#/">
+        <Link className="brand" to="/">
           Portfolio<span>.</span>
-        </a>
+        </Link>
 
-        <nav aria-label="Main navigation">
-          <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/experience">Experience</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </nav>
+        <div className="header-actions">
+          <nav aria-label="Main navigation">
+            <NavLink to="/" end>Home</NavLink>
+            <NavLink to="/experience">Experience</NavLink>
+            <NavLink to="/projects">Projects</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+          </nav>
+
+          <ThemeToggle />
+        </div>
       </header>
 
       <main id="main-content" tabIndex={-1}>

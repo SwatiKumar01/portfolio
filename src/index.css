@@ -254,3 +254,115 @@ h2 {
     font-size: clamp(2.3rem, 11vw, 3.5rem);
   }
 }
+
+/* Header layout with theme toggle */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-toggle {
+  padding: 9px 13px;
+  border: 1px solid #cbd1df;
+  border-radius: 8px;
+  background: white;
+  color: #18202f;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: #eeedff;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 4px;
+}
+
+/* Dark theme colors */
+:root[data-theme="dark"] {
+  color: #e8eaf2;
+  background: #141824;
+}
+
+:root[data-theme="dark"] body {
+  color: #e8eaf2;
+  background: #141824;
+}
+
+:root[data-theme="dark"] .brand {
+  color: #e8eaf2;
+}
+
+:root[data-theme="dark"] .site-header nav a {
+  color: #c4c9d8;
+}
+
+:root[data-theme="dark"] .site-header nav a.active {
+  color: #aaa2ff;
+}
+
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3 {
+  color: #f5f6fc;
+}
+
+:root[data-theme="dark"] .hero > p:not(.eyebrow),
+:root[data-theme="dark"] .project-card > p:not(.eyebrow),
+:root[data-theme="dark"] .detail-intro {
+  color: #c0c6d6;
+}
+
+:root[data-theme="dark"] .project-card {
+  background: #202637;
+  border-color: #394157;
+  box-shadow: none;
+}
+
+:root[data-theme="dark"] .tag-list li {
+  background: #343052;
+  color: #d4ceff;
+}
+
+:root[data-theme="dark"] .filter-control input {
+  background: #202637;
+  border-color: #49516a;
+  color: #f5f6fc;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  background: #292f42;
+  border-color: #49516a;
+  color: #f5f6fc;
+}
+
+:root[data-theme="dark"] .theme-toggle:hover {
+  background: #393252;
+}
+
+:root[data-theme="dark"] .site-footer {
+  border-color: #394157;
+  color: #c0c6d6;
+}
+
+:root[data-theme="dark"] .empty-state {
+  border-color: #49516a;
+}
+
+:root[data-theme="dark"] .skip-link {
+  color: #18202f;
+}
+
+/* Keep the header usable on smaller screens */
+@media (max-width: 640px) {
+  .header-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
