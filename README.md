@@ -1,16 +1,93 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio built with React and Vite to showcase my computer science background, technical skills, and programming projects.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View my portfolio](https://swatikumar01.github.io/portfolio/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive layout for desktop and mobile screens
+- Navigation between Home, Experience, Projects, and Contact pages
+- Project cards generated from a JavaScript data array
+- Searchable project list with a filter and no-results message
+- Dynamic project detail pages using URL parameters
+- Custom 404 page for unknown routes
+- Keyboard-visible focus styling and accessible form labels
+- Automated deployment to GitHub Pages using GitHub Actions
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- Vite
+- React Router
+- HTML and CSS
+- Git and GitHub
+- GitHub Pages and GitHub Actions
+
+## Featured Projects
+
+### Run-Length Encoding Compression
+A systems programming project focused on data compression, file operations, and representing repeated values as runs.
+
+### Closest Pair of Points
+An algorithms project exploring divide and conquer, recursion, and efficient ways to find the closest pair among a set of points.
+
+### Browser Forensics Website
+A web technologies project involving multi-page HTML development, browser inspection, debugging, and documenting technical findings.
+
+## Run Locally
+
+Make sure Node.js and npm are installed.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/SwatiKumar01/portfolio.git
+   ```
+
+2. Enter the project directory:
+
+   ```bash
+   cd portfolio
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL shown in your terminal.
+
+## Build and Verify
+
+Run the linter:
+
+```bash
+npm run lint
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The portfolio is hosted on GitHub Pages. A GitHub Actions workflow installs dependencies, runs linting and the production build, and deploys the generated site when changes are pushed to the `main` branch.
+
+## Author
+
+Swati Kumar
+
+[GitHub Profile](https://github.com/SwatiKumar01)
